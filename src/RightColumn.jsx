@@ -2,24 +2,44 @@ import React from 'react';
 import SectionTitle from './SectionTitle';
 import { motion } from 'framer-motion';
 
-const workExperience = {
-  company: 'Armed Forces of Armenia',
-  period: '2006 – 2023',
-  role: 'Artillery Battery Commander',
-  responsibilities: [
-    'Command and control of artillery units',
-    'Strategic planning and operational coordination',
-    'Map reading, topography, and terrain analysis',
-    'Leadership and team management under pressure',
-    'Decision-making in high-responsibility environments',
-  ],
-};
-
-const technicalExperience = [
-  'Python programming (training tasks & problem solving)',
-  'Machine Learning concepts and algorithms',
-  'React / JavaScript learning projects',
-  'Algorithmic thinking and structured solutions',
+const workExperience = [
+  {
+    role: 'AI Engineer',
+    company: 'AI Research (Personal) · Self-employed',
+    period: 'Nov 2025 – Present',
+    location: 'Yerevan, Armenia',
+    responsibilities: [
+      {
+        text: (
+          <>
+            Building version 2 of{' '}
+            <a href="https://armherbs.com" target="_blank" rel="noopener noreferrer">armherbs.com</a>
+            {' '}— advanced AI search matching herbs to diseases by their medicinal use
+          </>
+        ),
+        tech: 'Python, Vector Embeddings, RAG',
+      },
+      {
+        text:
+          'Built an ML model with the Gemini API to identify users likely to pay for a service ' +
+          'from registered-user data; handled a heavily imbalanced dataset (few paid vs. many ' +
+          'free users), outperforming the baseline by ~1%.',
+        tech: 'Python, XGBoost, ML libraries/tools',
+      },
+    ],
+  },
+  {
+    role: 'Artillery Battery Commander',
+    company: 'Armed Forces of Armenia · Full-time',
+    period: 'Jul 2006 – Mar 2023',
+    responsibilities: [
+      { text: 'Responsible for planning and execution of training and operational tasks.' },
+      { text: 'Over a period of 13 years, trained two generations of conscripts annually as artillery specialists and prepared them for reserve service.' },
+      { text: 'Held leadership roles over units ranging from 23 to 256 personnel in various operational contexts.' },
+      { text: 'Participated in combat operations during the 2020 Artsakh War, as well as armed engagements on 16 November 2021 and 13 September 2022.' },
+      { text: 'Designed surface trench systems optimized for mountain warfare for mortar batteries, later used as a reference model within the Armenian Armed Forces.' },
+    ],
+  },
 ];
 
 const coreSkills = {
@@ -38,14 +58,23 @@ const RightColumn = () => {
       transition={{ duration: 1.2, ease: "easeOut" }}
     >
       <SectionTitle title="Work Experience" />
-      <h4 style={{ color: "#a10000" }}>{workExperience.company} | {workExperience.period}</h4>
-      <p><b>{workExperience.role}</b></p>
-      <ul>
-        {workExperience.responsibilities.map((item, i) => <li key={i}>{item}</li>)}
-      </ul>
-
-      <SectionTitle title="Technical Experience" />
-      <ul>{technicalExperience.map((item, i) => <li key={i}>{item}</li>)}</ul>
+      {workExperience.map((job, i) => (
+        <div className="job" key={i}>
+          <h4 style={{ color: "#a10000" }}>{job.company} | {job.period}</h4>
+          <p>
+            <b>{job.role}</b>
+            {job.location && <span className="job-location"> · {job.location}</span>}
+          </p>
+          <ul>
+            {job.responsibilities.map((item, j) => (
+              <li key={j}>
+                {item.text}
+                {item.tech && <div className="tech-stack">Tech stack: {item.tech}</div>}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
 
       <SectionTitle title="Core Skills" />
       <h4>Leadership & Management</h4>

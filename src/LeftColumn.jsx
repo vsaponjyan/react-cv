@@ -30,6 +30,7 @@ const LeftColumn = () => {
       <ContactCard type="phone" value="+374 55 75 55 43" />
       <ContactCard type="address" value="Yerevan / Armenia / 0022" />
       <ContactCard type="email" value="vladimir.saponjyan@gmail.com" />
+      <ContactCard type="link" value="https://www.vladimirsaponjyan.com/" label="Personal website" />
       <ContactCard type="link" value="https://linkedin.com/in/vladimir-saponjyan" label="LinkedIn" />
       <ContactCard type="link" value="https://github.com/vsaponjyan" label="GitHub" />
 

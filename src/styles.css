@@ -159,3 +159,23 @@ ul {
     font-size: 16px;
   }
 }
+
+/* Work experience entries */
+.job {
+  margin-bottom: 14px;
+  break-inside: avoid;
+}
+
+.job-location {
+  color: #666;
+  font-weight: 400;
+}
+
+.tech-stack {
+  color: #555;
+  margin-top: 3px;
+}
+
+.right-column a {
+  color: #8B0000;
+}
