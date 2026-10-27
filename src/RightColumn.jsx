@@ -4,30 +4,35 @@ import { motion } from 'framer-motion';
 
 const workExperience = [
   {
-    role: 'AI Engineer',
-    company: 'AI Research (Personal) · Self-employed',
-    period: 'Nov 2025 – Present',
-    location: 'Yerevan, Armenia',
-    responsibilities: [
-      {
-        text: (
-          <>
-            Building version 2 of{' '}
-            <a href="https://armherbs.com" target="_blank" rel="noopener noreferrer">armherbs.com</a>
-            {' '}— advanced AI search matching herbs to diseases by their medicinal use
-          </>
-        ),
-        tech: 'Python, Vector Embeddings, RAG',
-      },
-      {
-        text:
-          'Built an ML model with the Gemini API to identify users likely to pay for a service ' +
-          'from registered-user data; handled a heavily imbalanced dataset (few paid vs. many ' +
-          'free users), outperforming the baseline by ~1%.',
-        tech: 'Python, XGBoost, ML libraries/tools',
-      },
-    ],
-  },
+  role: 'AI Engineer',
+  company: 'AI Research (Personal) · Self-employed',
+  period: 'Nov 2025 – Present',
+  location: 'Yerevan, Armenia',
+  responsibilities: [
+    {
+      text: (
+        <>
+          Developed and deployed version 2 of{' '}
+          <a
+            href="https://armherbs.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            armherbs.com
+          </a>
+          {' '}— an AI-powered herbal medicine search platform
+          that helps users find herbs based on their medicinal uses.
+        </>
+      ),
+      tech: 'Python, React, FastAPI, Vector Embeddings, RAG',
+    },
+    {
+      text:
+        'Developed an ML model to predict which registered users are likely to pay for a service, using user data and the Gemini API during the development process. Addressed severe class imbalance and improved performance by ~1% over the baseline.',
+      tech: 'Python, XGBoost, Gemini API, SMOTE',
+    },
+  ],
+},
   {
     role: 'Artillery Battery Commander',
     company: 'Armed Forces of Armenia · Full-time',
