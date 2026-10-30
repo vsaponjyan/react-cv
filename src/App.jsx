@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.css';
 import Header from './Header';
 import LeftColumn from './LeftColumn';
@@ -6,6 +6,8 @@ import RightColumn from './RightColumn';
 import html2pdf from 'html2pdf.js';
 
 function App() {
+  const [lang, setLang] = useState('en');
+
   const exportPDF = () => {
     const element = document.getElementById('cv');
     html2pdf()
@@ -21,19 +23,24 @@ function App() {
 
   return (
     <div>
-      <button onClick={exportPDF} className="export-btn">
-        Export to PDF
-      </button>
+      <div className="top-bar">
+        <button onClick={exportPDF} className="export-btn">
+          Export to PDF
+        </button>
+        <button
+          onClick={() => setLang(lang === 'en' ? 'am' : 'en')}
+          className="lang-toggle-btn"
+        >
+          {lang === 'en' ? '🇦🇲 Armenian' : '🇬🇧 English'}
+        </button>
+      </div>
 
       <div id="cv" className="cv-container">
-        <Header />
+        <Header lang={lang} />
         <div className="cv-columns">
-          <LeftColumn />
-          <RightColumn />
+          <LeftColumn lang={lang} />
+          <RightColumn lang={lang} />
         </div>
-        {/* <div className="footer-note">
-          CV generated with ❤️ using React & HTML/CSS
-        </div> */}
       </div>
     </div>
   );
