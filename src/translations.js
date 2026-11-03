@@ -1,5 +1,6 @@
 const translations = {
   en: {
+    name: 'Vladimir Saponjyan',
     sections: {
       contact: 'Contact',
       techStack: 'Tech Stack',
@@ -72,6 +73,7 @@ const translations = {
 
   
 am: {
+  name: 'Վլադիմիր Սապոնջյան',
   sections: {
     contact: 'Կոնտակտային տվյալներ',
     techStack: 'Տեխնիկական հմտություններ',
