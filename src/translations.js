@@ -1,5 +1,6 @@
 const translations = {
   en: {
+    name: 'Vladimir Saponjyan',
     sections: {
       contact: 'Contact',
       techStack: 'Tech Stack',
@@ -15,8 +16,8 @@ const translations = {
       personalWebsite: 'Personal website',
     },
     techStack: [
+      'AI/ML',
       'Python, JavaScript',
-      'Machine Learning fundamentals',
       'Algorithms & Computer Architecture',
       'Linux & C Programming',
       'Data Structures & OOP',
@@ -72,6 +73,7 @@ const translations = {
 
   
 am: {
+  name: 'Վլադիմիր Սապոնջյան',
   sections: {
     contact: 'Կոնտակտային տվյալներ',
     techStack: 'Տեխնիկական հմտություններ',
@@ -89,21 +91,21 @@ am: {
   },
 
   techStack: [
-    'Python, JavaScript',
-    'Մեքենայական ուսուցման հիմունքներ',
-    'Ալգորիթմներ և համակարգչային ճարտարապետություն',
-    'Linux օպերացիոն համակարգ և C լեզվով ծրագրավորում',
-    'Տվյալների կառուցվածքներ և օբյեկտակողմնորոշված ծրագրավորում',
+      'AI/ML',
+      'Python, JavaScript',
+      'Algorithms & Computer Architecture',
+      'Linux & C Programming',
+      'Data Structures & OOP',
   ],
 
   education: [
     {
       period: '2024 – 2025',
-      description: 'Picsart Academy — Համակարգչային ճարտարապետություն, C, Python, մաթեմատիկա, մեքենայական ուսուցում և տվյալագիտություն',
+      description: 'Picsart Academy — Computer Architecture, C, Python, Math, Machine Learning, Data Science',
     },
     {
       period: '2024',
-      description: 'Armenian Code Academy — JavaScript լեզվով ծրագրավորում',
+      description: 'Armenian Code Academy — JavaScript Programming',
     },
     {
       period: '2006 – 2010',
@@ -123,7 +125,7 @@ am: {
 
   workExperience: [
     {
-      role: 'Արհեստական բանականության ինժեներ',
+      role: 'AI Engineer',
       company: 'AI նախագիծ · Ինքնուրույն աշխատանք',
       period: 'Նոյեմբեր 2025 – Ներկա',
       location: 'Երևան, Հայաստան',

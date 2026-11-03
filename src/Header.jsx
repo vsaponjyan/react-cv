@@ -1,10 +1,12 @@
 import React from 'react';
+import translations from './translations';
 
-const Header = () => {
+const Header = ({ lang }) => {
+  const t = translations[lang];
+
   return (
     <div className="header">
-      <h1>Vladimir Saponjyan</h1>
-      
+      <h1>{t.name}</h1>
     </div>
   );
 };
